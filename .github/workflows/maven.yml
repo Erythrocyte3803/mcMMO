@@ -50,3 +50,9 @@ jobs:
     # 4. Build via Maven 
     - name: Build via Maven
       run: mvn verify -B --file pom.xml
+    # 5. Getjar
+    - name: Upload MCMMO
+      uses: actions/upload-artifact@v2
+      with:
+        name: mcmmo
+        path: target/*.jar  
